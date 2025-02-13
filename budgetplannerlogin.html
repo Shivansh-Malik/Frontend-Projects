@@ -4,7 +4,8 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" type="text/css" href="style_l.css">
+    <link rel="stylesheet" type="text/css" href="budgetplannerlogin.css">
+    <script src="budgetplannerlogin.js"></script>
 </head>
 <body>
 <div class="container d-flex justify-content-center h-100">
@@ -14,22 +15,20 @@
             <div class="welcome">Welcome Back</div>
         </div>
         <div class="card-body">
-            <form>
+            <form onsubmit="event.preventDefault(); validateLogin();">
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="USERNAME">
+                    <input type="text" class="form-control" id="username" placeholder="USERNAME">
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-key"></i></span>
                     </div>
-                    <input type="password" class="form-control" placeholder="PASSWORD">
+                    <input type="password" class="form-control" id="password" placeholder="PASSWORD">
                 </div>
-                <div class="form-group form-check text">
-                    <input type="checkbox" class="form-check-input "> Remember Me
-                </div>
+                <div id="error-message" class="text-danger text-center mb-3"></div>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
         </div>
