@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;  
+}
+html,body{
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    }
+.container {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.2);
+    color:white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.text{
+    color:white;
+}
+.left-section {
+    width: 50%;
+    background: url('https://source.unsplash.com/800x500/?finance,investment') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+}
+.right-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-container {
+    text-align: center;
+    width: 80%;
+}
+.icon {
+    font-size: 24px;
+}
+.welcome-text {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn {
+    width: 100%;
+    background: #FFC312;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #FFC312;
+}
+.toggle-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.toggle-text a {
+    color: #FFC312;
+    text-decoration: none;
+}
+.toggle-text a:hover {
+    text-decoration: underline;
+}
