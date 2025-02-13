@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    width: 250px;
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 10px 0;
+    cursor: pointer;
+}
+.sidebar .library-section {
+    margin-top: 20px;
+}
+.sidebar button {
+    width: 100%;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sidebar-footer {
+    font-size: 0.8rem;
+}
+.search-container {
+    position: relative;
+    display: inline-block;
+    width: 950px;
+    margin-left: 12px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 6px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: gray; 
+    pointer-events: none;
+}
+
+.search-bar {
+    padding-left: 35px; 
+    height: 30px;
+    width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(11, 11, 11);
+}
+
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #181818;
+}
+.main-header input {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.main-header .actions button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; 
+    margin: 20px auto;
+}
+.content h2 {
+    width: 100%;
+    text-align: left; 
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.artist-row, .album-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+.artist, .album {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+.player-bar {
+    background-color: rgb(126, 19, 126);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.artist img {
+    width: 150px;
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 5px solid white; 
+    display: block;
+    margin: 0 auto; 
+  }
+  .artist {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    margin: 20px 0; 
+  }
+  
+  .artist-card {
+    text-align: center; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .artist-card img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 50%;
+    border: 5px solid white; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .artist-card img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+  }
+  .artist-name {
+    margin-top: 10px; 
+    font-size: 16px; 
+    color:white;
+  }  
+  .album img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 50%;
+    border: 5px solid white; 
+    display: block;
+    margin: 0 auto; 
+  }
+  .album {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    margin: 20px 0; 
+  }
+  
+  .album-card {
+    text-align: center; 
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .album-card img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 5px solid white; 
+    transition: transform 0.3s ease;
+  }
+  .album-card img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+  }
+  .album-name {
+    margin-top: 10px; 
+    font-size: 16px; 
+    color:white;
+  }
