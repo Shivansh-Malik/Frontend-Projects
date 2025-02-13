@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Financial Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        AI Financial Planner
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-btn" id="toggle-btn">&#x276E;</button>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="month-wise.html">Month-wise Finances</a></li>
+            <li><a href="add-details.html">Add Monthly Details</a></li>
+            <li><a href="ai-advice.html">AI Advice</a></li>
+            <li><a href="graphs.html">Graph Visualization</a></li>
+            <li><a href="receipts.html">Store Receipts</a></li>
+        </ul>
+    </div>
+
+    <div class="collapsed-sidebar" id="collapsed-sidebar">
+        <button class="toggle-btn" id="expand-btn">&#x276F;</button>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h2>Welcome, User!</h2>
+            <p>Total Earnings: <strong>₹50,000</strong></p>
+            <p>Total Expenses: <strong>₹30,000</strong></p>
+            <p>Savings: <strong>₹20,000</strong></p>
+        </div>
+
+        <div class="options">
+            <a href="month-wise.html" class="btn">View Month-wise Finances</a>
+            <a href="add-details.html" class="btn">Add Monthly Details</a>
+            <a href="ai-advice.html" class="btn">AI Financial Advice</a>
+            <a href="graphs.html" class="btn">Graph Visualization</a>
+            <a href="receipts.html" class="btn">Store Payment Receipts</a>
+        </div>
+    </div>
+
+    <footer class="footer">© 2025 AI Financial Planner</footer>
+</body>
+</html>
