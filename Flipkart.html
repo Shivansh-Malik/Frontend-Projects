@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Owl carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TheKid and SmallKid</title>
+    <link rel="stylesheet" href="flipkart.css">
+
+</head>
+
+<body>
+    <style>
+        .white{
+            background-color: whitesmoke;
+        }
+        .col-md-4{
+            text-align: center;
+            font-style: italic;
+        }
+        .log{
+            color:rgb(108, 180, 180);
+            margin-left:600px;
+            font-size: larger;
+            letter-spacing: 1.5px;
+            margin-top: 25px;
+            background-color: rgb(69, 67, 67);
+            border: 100%;
+            border-radius: 5%;
+            transition: .5s;
+        }
+        .log:hover{
+            transform: scale(1.2);
+            transition: .5s;
+        }
+        .color{
+            color: rgb(68, 68, 196);
+            margin-top:10px;
+            margin-left:100px;
+            font-size:180%;
+            font-weight:bold;
+            font-style:italic;
+        }
+        .colo{
+            
+            color:grey;
+            margin-top:300px;
+            margin-left: 100px;
+            font-weight:500;
+            font-size: small;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .col{
+            color:rgb(230, 230, 12);
+            margin-right:38px;
+            font-weight: 500;
+            font-size:small;
+            font-style:italic;
+        }
+        .bar{
+            margin-top:25px;
+            margin-left: 200px;
+            width:200%;
+            height:54%;
+            background-color: rgb(220, 219, 219);
+            border-radius: 4%;
+            border: none;
+        }
+        .container1{
+            background-color: rgb(252, 250, 250);
+        }
+        .container{
+            background-color: white;
+        }
+        .xlack{
+            display: block;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .xlack:visited{
+            color:black;
+            text-decoration: none;
+        }
+        .black{
+            display:block;
+            margin-top: 5px;
+            color:black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .black:visited{
+            color:black;
+            text-decoration:none;
+        }
+        .vlack{
+            display:block;
+            margin-top: 5px;
+            margin-left:"100px";
+            color:black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .vlack:visited{
+            color:black;
+            text-decoration:none;
+        }
+        .clack{
+            display:block;
+            margin-top: 5px;
+            margin-left:"100px";
+            color:black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .clack:visited{
+            color:black;
+            text-decoration:none;
+        }
+        .nlack{
+            display:block;
+            margin-top: 5px;
+            margin-left:"100px";color:black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nlack:visited{
+            color:black;
+            text-decoration:none;
+        }
+        .mlack{
+            display:block;
+            margin-top: 5px;
+            margin-left:"100px";
+            color:black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .mlack:visited{
+            color:black;
+            text-decoration:none;
+        }
+        .camera{
+            color:black;
+            text-align:center;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: large;
+        }
+        .camera:visited{
+            color:black;
+        }
+        .card{
+            transition: .5s;
+            border-radius: 2%;
+        }
+        .card:hover{
+            transform: scale(1.1);
+            transition: .5s;
+           
+            
+        }
+        .price{
+            display:block;
+            text-align: center;
+            color:black;
+            font-weight: bold;
+            font-size: large;
+            text-decoration: none;
+            color: rgb(95, 95, 201);
+        }
+        .price:visited{
+            color:black;
+        }
+        .work{
+            text-align: center;
+            font-weight: 400;
+            font-size: large;
+        }
+        .wor{
+            text-align: center;
+            font-weight: bold;
+            font-size: large;
+            color: rgb(45, 143, 170);
+        }
+        .sep{
+            text-align: center;
+            font-weight: 400;
+            font-size: large;
+        }
+        .se{
+            text-align: center;
+            font-weight: bold;
+            color: rgb(53, 217, 162);
+            font-size: large;
+        }
+        
+    </style>
+    <div class="white">
+        <div class="container1">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="./index.html">
+                        <h2 class="color">TheKid</h2>
+                        <span class="colo">Small</span>
+                        <span class="col">Kid</span>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" placeholder="Search for Products, Brands and More" class="bar">
+                </div>
+                <div class="col-md-2">
+                    <a href="./Loginportal.html">
+                        <button type="submit" class="log">Login</button>
+                    </a>
+                </div>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="https://www.flipkart.com/grocery-supermart-store?marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_819bc433-ff18-494d-992d-09890d466e75_1_372UD5BXDFYS_MC.CBUR1Q46W5F1&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Grocery_CBUR1Q46W5F1&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L0_view-all&cid=CBUR1Q46W5F1"
+                        target="_blank">
+                        <img src="images/Grocery.png" alt="">
+                    </a>
+                    <span class="xlack">Grocery</span>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.flipkart.com/offers-list/itaccessories?screen=dynamic&pk=themeViews%3DITAcce%3Aapp%2CITAcce%3Adesk~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&fm=neo%2Fmerchandising&iid=M_4a8113ee-76e7-490a-a97d-a7dccde9ac4f_1_372UD5BXDFYS_MC.B0RGQT4LXCY4&otracker=hp_rich_navigation_7_1.navigationCard.RICH_NAVIGATION_Electronics~Laptop%2BAccessories_B0RGQT4LXCY4&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_7_L1_view-all&cid=B0RGQT4LXCY4"
+                        target="_blank">
+                        <img src="images/Electronics.png" alt="" class="gap">
+                    </a>
+                    <span class="black">Electronics</span>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.flipkart.com/furniture-india-ka-furniture-livingroom-store?fm=neo%2Fmerchandising&iid=M_a4bc4cdb-ccd2-4aa3-9ac1-f31e624d7fcf_1_372UD5BXDFYS_MC.4MQHUMDYWFBZ&otracker=hp_rich_navigation_3_1.navigationCard.RICH_NAVIGATION_Home%2B%2526%2BFurniture~Living%2BRoom%2BFurniture_4MQHUMDYWFBZ&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L1_view-all&cid=4MQHUMDYWFBZ"
+                        target="_blank">
+                        <img src="images/Home and Furniture.png" alt="">
+                    </a>
+                    <span class="vlack">Home and furniture</span>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_bd533fc2-3cb7-4b8c-8250-f0838b3f3bbb_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_2_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L0_view-all&cid=ZRQ4DKH28K8J"
+                        target="_blank">
+                        <img src="images/Mobiles.png" alt="">
+                    </a>
+                    <span class="clack">Mobiles</span>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.flipkart.com/tvs-and-appliances-new-clp-store?fm=neo%2Fmerchandising&iid=M_af89fe0d-43f0-4aa7-a7e1-4f4c57888413_1_372UD5BXDFYS_MC.LO4IWVHA61BX&otracker=hp_rich_navigation_6_1.navigationCard.RICH_NAVIGATION_Appliances_LO4IWVHA61BX&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_6_L0_view-all&cid=LO4IWVHA61BX"
+                        target="_blank">
+                        <img src="images/Appliances.png" alt="">
+                    </a>
+                    <span class="nlack">Appliances</span>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.flipkart.com/travel/flights?param=DTNavIcon&fm=neo%2Fmerchandising&iid=M_f3678afe-1c38-4256-8939-690801f68e25_1_372UD5BXDFYS_MC.V4ZPKTOAO321&otracker=hp_rich_navigation_7_1.navigationCard.RICH_NAVIGATION_Travel_V4ZPKTOAO321&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_7_L0_view-all&cid=V4ZPKTOAO321"
+                        target="_blank">
+                        <img src="images/Travel.png" alt="">
+                    </a>
+                    <span class="mlack">Travel</span>
+                </div>
+            </div>
+        </div><br>
+
+        <!-- Carousel -->
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="https://www.flipkart.com/redmi-note-13-pro-plus-coming-soon-store?param=3673"
+                        target="_blank">
+                        <img src="images/Redmi.png" class="d-block w-100" alt="image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.flipkart.com/travel/flights?param=Travel_FKHTravel_HPTravel_HP_DT-HPW_indigo-flynow"
+                        target="_blank">
+                    <img src="images/plane.png" class="d-block w-100" alt="image">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.flipkart.com/travel/flights?param=Travel_FKHTravel_HTravel_HP_DT-HPW_upto16bank"
+                        target="_blank">
+                        <img src="images/sale.png" class="d-block w-100" alt="image">
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div><br>
+
+
+        <div class="sys">
+            <h4>Best of Electronics</h4>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/cameras/dslr-mirrorless/pr?sid=jek%2Cp31%2Ctrv&p%5B%5D=facets.fulfilled_by%255B%255D%3DFlipkart%2BAssured&p%5B%5D=facets.type%255B%255D%3DMirrorless&param=179&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJTaG9wIE5vdyEiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJUb3AgTWlycm9ybGVzcyBDYW1lcmFzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiRExMRzJYRENGQlhWVVpUSCIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX19fX0%3D">
+                            <img src="images/Camera.png" alt="images">
+                        </a>
+                        <span class="camera">Top Mirrorless cameras</span>
+                        <span class="price">Shop Now!</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/6bo/~cs-xef9jf868n/pr?sid=6bo&collection-tab-name=Wireless+Mouse+KEB&param=565&hpid=ZNTN0v9q01xg495vwHydGKp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTE2OSJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX0sImhlcm9QaWQiOnsic2luZ2xlVmFsdWVBdHRyaWJ1dGUiOnsia2V5IjoiaGVyb1BpZCIsImluZmVyZW5jZVR5cGUiOiJQSUQiLCJ2YWx1ZSI6IkFDQ0dDSllDN0JWUlVDN1oiLCJ2YWx1ZVR5cGUiOiJTSU5HTEVfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJXaXJlbGVzcyBNb3VzZSAmIEtleWJvYXJkIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D">
+                            <img src="images/Keyboard.png" alt="images">
+                        </a>
+                        <span class="camera">Keyboards</span>
+                        <span class="price">From Rs.299</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/search?q=best%20of%20womens%20trimmer&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off">
+                            <img src="images/Shaving.png" alt="images">
+                        </a>
+                        <span class="camera">Best of Women Trimmers</span>
+                        <span class="price">From Rs.599</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/search?q=smart%20Tv&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off">
+                            <img src="images/Smart TV.png" alt="images">
+                        </a>
+                        <span class="camera">Smart TV's</span>
+                        <span class="price">From Rs.12,999</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/health-personal-care-appliances/personal-care-appliances/shavers/pr?sid=zlw%2C79s%2Cu3j&fm=neo%2Fmerchandising&iid=M_abc94b2e-c5ad-4d9f-a408-f077e0b71fda_1_372UD5BXDFYS_MC.7IRTITZ74DB6&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L2_view-all&cid=7IRTITZ74DB6&hpid=zGQlhArn0YmltUO10UPgIKp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTEsNjQ5Il0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiU0hWR0c0TlFGS1lQREZBRiIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX0sInRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkJlc3Qgb2YgU2hhdmVycyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D">
+                            <img src="images/Trimer.png" alt="images">
+                        </a>
+                        <span class="camera">Best of Shavers</span>
+                        <span class="price">From Rs.1,649</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/search?q=usb%20gadgets&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off">
+                            <img src="images/USB Gadget.png" alt="images">
+                        </a>
+                        <span class="camera">USB Gadgets</span>
+                        <span class="price">up to 40% off</span>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <br>
+
+        <!-- Owl carousel -->
+        <div class="ca">
+            <h4>Beauty, Food, Toys and more</h4>
+            <div class="mt-5">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="card">
+                            <a href="https://www.flipkart.com/automotive-accessories/vehicle-cleaners/vehicle-pressure-washers/pr?sid=1mt%2Cs84%2Cjzx&marketplace=FLIPKART&hpid=pJwjnlPNnItperFYKPD-6qp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJVcHRvIDY1JSBPZmYiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJoZXJvUGlkIjp7InNpbmdsZVZhbHVlQXR0cmlidXRlIjp7ImtleSI6Imhlcm9QaWQiLCJpbmZlcmVuY2VUeXBlIjoiUElEIiwidmFsdWUiOiJDV1JHWkFCOURERkVGSEZIIiwidmFsdWVUeXBlIjoiU0lOR0xFX1ZBTFVFRCJ9fSwidGl0bGUiOnsibXVsdGlWYWx1ZWRBdHRyaWJ1dGUiOnsia2V5IjoidGl0bGUiLCJpbmZlcmVuY2VUeXBlIjoiVElUTEUiLCJ2YWx1ZXMiOlsiQ2FyIHByZXNzdXJlIHdhc2hlciJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D" target="_blank">
+                                <img src="images/Car Pressure washer.png" alt="Images">
+                            </a>  
+                            <span class="work">Car pressure washer</span>
+                            <span class="wor">upto 65%off</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <a href="https://www.flipkart.com/pens-stationery/pr?sid=dgv&p%5B%5D=facets.rating%255B%255D%3D4%25E2%2598%2585%2B%2526%2Babove&hpid=B2Ku1G4aX7ZGf37AOgCozap7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTQ5Il0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiU0tQR0pTRkhUREhZR0dRRiIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX0sInRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlRvcCBTZWxsaW5nIFN0YXRpb25lcnkiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19" target="_blank">
+                                    <img src="images/Top Selling Stationery.png" alt="Images">
+                                </a>
+                                <span class="work">Top selling stationery</span>
+                                <span class="wor">From Rs.49</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <a href="https://www.flipkart.com/toys/toy-vehicles/remote-control-toys/pr?sid=tng%2C56a%2Cfq8&p%5B%5D=facets.fulfilled_by%255B%255D%3DFlipkart%2BPlus&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D300000000000&hpid=w0h50eB9gc7vXk_wfN2Za6p7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJVcCB0byA4MCUgT2ZmIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiUkNURzlLTURBQVpGUk1NRyIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX0sInRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlJlbW90ZSBDb250cm9sIFRveXMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19" target="_blank">
+                                    <img src="images/Remote control Toys.png" alt="Images">
+                                </a>
+                                <span class="work">Remote control toys</span>
+                                <span class="wor">up to 80% off</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <a href="https://www.flipkart.com/toys/action-toys/pr?sid=tng%2Csv3&p%5B%5D=facets.rating%255B%255D%3D4%25E2%2598%2585%2B%2526%2Babove&hpid=rTHd3P8c2Eh-2fwrqbmKvqp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJVcCB0byA3MCUgT2ZmIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiR1RPR0FZQ0paSEJaR1RZQyIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX0sInRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlRyaWN5Y2xlcyAmIFJpZGVvbnMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19" target="_blank">
+                                    <img src="images/Tricycle and Rideons.png" alt="images">
+                                </a>
+                                <span class="work">Tricycles and Rideons</span>
+                                <span class="wor">up to 70% off</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <a href="https://www.flipkart.com/exercise-fitness/fitness-accessories/pr?sid=qoc%2Cacb&p%5B%5D=facets.fulfilled_by%255B%255D%3DPlus%2B%2528FAssured%2529&hpid=wXxDXjUDi0JocvmBiNvc9Kp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTEzOSJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX0sImhlcm9QaWQiOnsic2luZ2xlVmFsdWVBdHRyaWJ1dGUiOnsia2V5IjoiaGVyb1BpZCIsImluZmVyZW5jZVR5cGUiOiJQSUQiLCJ2YWx1ZSI6IkRCTEdIUDdUWldYOE5ORUIiLCJ2YWx1ZVR5cGUiOiJTSU5HTEVfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJHeW0gRXNzZW50aWFscyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D" target="_blank">
+                                    <img src="images/Gym essentials.png" alt="images">
+                                </a>
+                                <span class="work">Gym essentials</span>
+                                <span class="wor">From Rs.139</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <a href="https://www.flipkart.com/sports/cycling/cycles/pr?sid=abc%2Culv%2Cixt&p%5B%5D=facets.gear_type%255B%255D%3DNon%2BGeared&p%5B%5D=facets.fulfilled_by%255B%255D%3DPlus%2B%2528FAssured%2529&hpid=WXirg7reAiTX0n-6u1knE6p7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJVcCB0byA0MCUgT2ZmIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiQ0NFR1A3UVpCV1lIWldNRiIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX0sInRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIk5vbi1HZWFyZWQgQ3ljbGVzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D" target="_blank">
+                                    <img src="images/Non- Geared Cycles.png" alt="images">
+                                </a>
+                                <span class="work">Non-Geared Cycles</span>
+                                <span class="wor">up to 40% off</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <a href="https://www.flipkart.com/food-products/dry-fruit-nut-seed/pr?sid=eat%2Cltb&p%5B%5D=facets.fulfilled_by%255B%255D%3DPlus%2B%2528FAssured%2529&param=9552&hpid=KM6Pjnf8EGhpAF17AzVGxqp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJVcHRvIDc1JSBPZmYiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJoZXJvUGlkIjp7InNpbmdsZVZhbHVlQXR0cmlidXRlIjp7ImtleSI6Imhlcm9QaWQiLCJpbmZlcmVuY2VUeXBlIjoiUElEIiwidmFsdWUiOiJOREZHRTNZVzdEVUs4UVJVIiwidmFsdWVUeXBlIjoiU0lOR0xFX1ZBTFVFRCJ9fSwidGl0bGUiOnsibXVsdGlWYWx1ZWRBdHRyaWJ1dGUiOnsia2V5IjoidGl0bGUiLCJpbmZlcmVuY2VUeXBlIjoiVElUTEUiLCJ2YWx1ZXMiOlsiRHJ5IEZydWl0cyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D" target="_blank">
+                                    <img src="images/Breakfast Cereal.png" alt="images">
+                                </a>
+                                <span class="work">Breakfast Cereal</span>
+                                <span class="wor">up to 75% off</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <a href="https://www.flipkart.com/musical-instruments/string-instruments/pr?sid=ypu%2Cujd&p%5B%5D=facets.serviceability%5B%5D%3Dtrue&hpid=B-XAf3E_DShXt5jns5U3Map7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJVcCB0byA3MCUgT2ZmIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiQUNHR0ZCTjNKNEpTWkJSOCIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX0sInRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlN0cmluZyBJbnN0cnVtZW50cyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D" target="_blank">
+                                    <img src="images/String Instruments.png" alt="images">
+                                </a>
+                                <span class="work">String instruments</span>
+                                <span class="wor">up to 70% off</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <br>
+        
+        <div class="c">
+            <h4>Gifting Collections and Winter Buys</h4>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/all/~cs-7fac62032f285fd41077836ef816b219/pr?sid=r18,f13&marketplace=FLIPKART&restrictLocale=true">
+                            <img src="images/Wrist watch.png" alt="images">
+                        </a>
+                        <span class="sep">Wrist Watches</span>
+                        <span class="se">Min. 90% off</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/all/~cs-6f5af2c6fd4068ce713d184f1481cd2b/pr?sid=osp,cil,1cu&marketplace=FLIPKART&restrictLocale=true">
+                            <img src="images/Men's sports shoes.png" alt="images">
+                        </a>
+                        <span class="sep">Men's sports shoes</span>
+                        <span class="se">Min. 70% off</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/all/~cs-140790b0442c801325b00c2f77c8b66e/pr?sid=0pm,fcn&marketplace=FLIPKART&restrictLocale=true">
+                            <img src="images/Headset.png" alt="images">
+                        </a>
+                        <span class="sep">Headset</span>
+                        <span class="se">Min. 50% off</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/all/~cs-0082a75b990faa4b37ade0f4f850e2af/pr?sid=arb,kjw,bm1&marketplace=FLIPKART&restrictLocale=true">
+                            <img src="images/Wall clocks.png" alt="images">
+                        </a>
+                        <span class="sep">Wall Clocks</span>
+                        <span class="se">Wildest Range</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/all/~cs-226f672e4ff8c70d281a4f8f715f313c/pr?sid=jra,knw,llw&marketplace=FLIPKART&restrictLocale=true">
+                            <img src="images/Blankets.png" alt="images">
+                        </a>
+                        <span class="sep">Blankets</span>
+                        <span class="se">Min. 50% off</span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card">
+                        <a href="https://www.flipkart.com/all/~cs-f9e043d95e21dfefd6342005c4c0a18e/pr?sid=clo,qvw,64a,vui&marketplace=FLIPKART&restrictLocale=true">
+                            <img src="images/Mens Sweatshirts.png" alt="images">
+                        </a>
+                        <span class="sep">Men's Sweatshirts</span>
+                        <span class="se">Special Offers</span>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <br>
+
+        
+        <h4>End of season Bestsellers</h4>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card">
+                    <a href="https://www.flipkart.com/all/~cs-7fac62032f285fd41077836ef816b219/pr?sid=r18,f13&marketplace=FLIPKART&restrictLocale=tru">
+                        <img src="images/Wrist watches.png" alt="images">
+                    </a>
+                    <span class="sep">Wrist Watches</span>
+                    <span class="se">Min. 90% off</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <a href="https://www.flipkart.com/all/~cs-f9e043d95e21dfefd6342005c4c0a18e/pr?sid=clo,qvw,64a,vui&marketplace=FLIPKART&restrictLocale=true">
+                        <img src="images/Men's Sweatshirts.png" alt="images">
+                    </a>
+                    <span class="sep">Men's Sweatshirts</span>
+                    <span class="se">Special Offers</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <a href="https://www.flipkart.com/all/~cs-c0f5288930bc49bd620c509b30d0f83a/pr?sid=clo,ash,ank,edy&marketplace=FLIPKART&restrictLocale=true">
+                        <img src="images/Men's T-shirts.png" alt="images">
+                    </a>
+                    <span class="sep">Men's T-Shirts</span>
+                    <span class="se">In Focus Now</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <a href="https://www.flipkart.com/all/~cs-0c0343d2ea3f9ad1de25446ac9ae8d6d/pr?sid=clo,qvw,z0g,jbm&marketplace=FLIPKART&restrictLocale=true">
+                        <img src="images/Men's Jacket.png" alt="images">
+                    </a>
+                    <span class="sep">Men's Jackets</span>
+                    <span class="se">Min. 50% off</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <a href="https://www.flipkart.com/all/~cs-40e21a231ab65697a9c74544a122a7ef/pr?sid=g9b,ema,5la,yzb&marketplace=FLIPKART&restrictLocale=true">
+                        <img src="images/Skin Treatment.png" alt="images">
+                    </a>
+                    <span class="sep">Skin Treatment</span>
+                    <span class="se">Min. 50% off</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <a href="https://www.flipkart.com/search?q=Men%27s%20sandals%20and%20floaters&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off">
+                        <img src="images/Men's sandals and floaters.png" alt="images">
+                    </a>
+                    <span class="sep">Men's sandals and floaters</span>
+                    <span class="se">Min. 70% off</span>
+                </div>
+            </div>
+        </div><br>
+        <br>
+
+    </div>
+
+    <!-- Jquery CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- Bootstrap Javascript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+
+    <!-- Owl carousel javascript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Owl Carousel -->
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 2,
+                    nav: false
+                },
+                1000: {
+                    items: 6,
+                    nav: true,
+                    loop: false
+                }
+            }
+        })
+        function validation() {
+            var name = document.getElementById("example").value;
+            var email = document.getElementById("input").value;
+            var number = document.getElementById("1").value;
+            var password = document.getElementById("2").value;
+            var Cpassword = document.getElementById("3").value;
+            // We use var means variable because everything will be different according to user.
+            // we again have to use var because we have to give permission that what all things will be allowed in name,email,password and numbers.
+        
+            // Permissions
+        
+            var namecheck = /^[A-Za-z ]{2,}$/;
+            // This is the format for permission and we can't use same name in permission and above that we have use like in email section we have use email then in permission section we have to use another name.
+            // This 2, inside the curly brackets denotes the min and max characters in name column. Therefore we can only decide min characters not max hence max is left empty.
+            var emailcheck= /^[A-Za-z0-9._]{2,}@[A-Za-z0-9]{2,}[.]{1}[A-Za-z]{2,6}[.]{1}[A-Za-z]{2,6}$/;
+            var numbercheck=/^[6789][0-9]{9}$/;
+            // Any Indian number will start with either 6,7,8,9 it is fixed.
+            var passwordcheck=/^[A-Za-z0-9!@#$%&*._]{8,16}$/
+            
+            // for checking the permissions, that whether it has fulfill the permissions or not, we will use loop.
+        
+            if(namecheck.test(name)){
+                document.getElementById("error-name").innerHTML="";
+            }
+            else{
+                document.getElementById("error-name").innerHTML="Use only alphabets";
+                return false;
+                // We have to write the id of span tag in elementid and in else condition which is for false we have to give message to user and write return false so that user will not be able to submit the form. 
+            }
+            if(emailcheck.test(email)){
+                document.getElementById("error-").innerHTML="";
+            }
+            else{
+                document.getElementById("error-").innerHTML="use only alphabets,numbers and special characters";
+                return false;
+            }
+            if(numbercheck.test(number)){
+                document.getElementById("error-n").innerHTML="";
+            }
+            else{
+                document.getElementById("error-n").innerHTML="Type 10 digit number starting with either 6,7,8 or 9.";
+                return false
+            }
+            if(passwordcheck.test(password)){
+                document.getElementById("error-na").innerhTML="";
+            }
+            else{
+                document.getElementById("error-na").innerHTML="Minimum 8 characters are required and use atleast one special character in password";
+                return false;
+            }
+            if(Cpassword.match(passwordcheck)){
+                document.getElementById("error-nam").innerHTML="";
+            }
+            else{
+                document.getElementById("error-nam").innerHTML="Password does not match!";
+                return false
+            }
+        }
+    </script>
+</body>
+
+</html>
