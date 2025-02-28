@@ -7,6 +7,9 @@ body {
     display: flex;
     height: 100vh;
 }
+.invert{
+  filter: invert(1);
+}
 .sidebar {
     width: 250px;
     background-color: #000;
@@ -31,16 +34,7 @@ body {
 .sidebar .library-section {
     margin-top: 20px;
 }
-.sidebar button {
-    width: 100%;
-    background-color: #1db954;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    margin: 5px 0;
-    cursor: pointer;
-    border-radius: 5px;
-}
+
 .sidebar-footer {
     font-size: 0.8rem;
 }
@@ -268,6 +262,18 @@ body {
     justify-content: center;
     gap:16px;
   }
+  .songlist{
+    max-height: 20vh;
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scrollbar-width: thin; 
+    scrollbar-color: #555 #222; /* Dark thumb & track */
+    background-color: #232323;
+  }
   .songlist ul li{
-    list-style-type: decimal;
+    list-style-type: none;
+    display: flex;
+    gap:34px;
+    cursor: pointer;
+    padding: 5px 5px;
   }

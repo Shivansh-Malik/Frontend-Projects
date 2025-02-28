@@ -19,10 +19,11 @@ async function main(){
     console.log(songs);
     let songUL=document.querySelector(".songlist").getElementsByTagName("ul")[0];
     for (const song of songs) {
-        songUL.innerHTML=songUL.innerHTML + `<li> ${song.replaceAll("%20"," ")} </li>`;
+        songUL.innerHTML += `<li> ${song.replace(/.*\/|\..*/g, "").replaceAll("%20", " ")} </li>`;
+
     }
     var audio=new Audio(songs[0]);
-    audio.play();
+    // audio.play();
 }
 
 main();
