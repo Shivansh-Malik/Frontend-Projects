@@ -105,11 +105,12 @@ body {
     align-items: center;
     width: 90%; 
     margin: 20px auto;
-    max-height: 70vh;
+    max-height: 100vh;
     overflow-y: auto; /* Enable vertical scrolling */
     overflow-x: hidden; /* Hide horizontal scrollbar */
     scrollbar-width: thin; 
     scrollbar-color: #555 #222; /* Dark thumb & track */
+    position:relative;
 }
 .content h2 {
     width: 100%;
@@ -254,4 +255,19 @@ body {
     margin-top: 10px; 
     font-size: 16px; 
     color:white;
+  }
+  .playbar{
+    position:absolute;
+    bottom:0;
+    background-color: greenyellow;
+    width: 100%;
+    padding:12px;
+  }
+  .songbutton{
+    display: flex;
+    justify-content: center;
+    gap:16px;
+  }
+  .songlist ul li{
+    list-style-type: decimal;
   }
