@@ -27,6 +27,9 @@
                 <div>Song Name</div>
                 <div>Song Artist</div>
               </div>
+              <div class="playnow">
+                <img class="invert" src="play.svg" alt="">
+              </div>
             </li>
           </ul>
         </div>
@@ -181,16 +184,17 @@
     </div>
   </div>
   <div class="playbar">
-    <div class="songinfo">
-
+    <div class="seekbar">
+      <div class="circle"></div>
     </div>
-    <div class="songbutton">
-      <img src="previous.svg" alt="">
-      <img src="play.svg" alt="">
-      <img src="next.svg" alt="">
-    </div>
-    <div class="songtime">
-
+    <div class="abovebar">
+      <div class="songinfo"></div>
+      <div class="songbutton">
+        <img class="invert" id="previous" src="previous.svg" alt="">
+        <img class="invert" id="play" src="play.svg" alt="">
+        <img class="invert" id="next" src="next.svg" alt="">
+      </div>
+      <div class="songtime"></div>
     </div>
   </div>
   <script src="spotify.js"></script>
