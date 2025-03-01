@@ -68,15 +68,14 @@ const playmusic = (trackIndex) => {
 
 // 🔹 Function to change background color every few seconds
 function startBackgroundAnimation() {
-    clearInterval(interval); // Stop previous interval
-
+    clearInterval(interval);
     interval = setInterval(() => {
         const colors = [
-            "linear-gradient(135deg, #ff4e50, #fc913a)",
-            "linear-gradient(135deg, #ffb199, #ff0844)",
-            "linear-gradient(135deg, #a8ff78, #78ffd6)",
-            "linear-gradient(135deg, #12c2e9, #c471ed)",
-            "linear-gradient(135deg, #d4fc79, #96e6a1)"
+            "linear-gradient(135deg, #ff4e50, #a76d3e)",
+            "linear-gradient(135deg, #ec9c07, #78ffd6)",
+            "linear-gradient(135deg, #634d46, #ff0844)",
+            "linear-gradient(135deg, #12c2e9, #a208f0)",
+            "linear-gradient(135deg, #abf105, #4a7650)"
         ];
         playbar.style.background = colors[Math.floor(Math.random() * colors.length)];
     }, 5000);
