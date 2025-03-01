@@ -24,33 +24,52 @@ function formatTime(seconds) {
     return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 }
 
-
 let currentAudio = null; // Store the currently playing audio
+let songs = []; // Store song list globally
+let currentSongIndex = 0; // Track the currently playing song index
 
-const playmusic = (track) => {
+const playmusic = (trackIndex) => {
+    if (songs.length === 0) return; // Prevent playing if no songs loaded
+
     if (currentAudio) {
         currentAudio.pause(); // Stop the previous song
         currentAudio.currentTime = 0; // Reset to start
     }
 
-    currentAudio = new Audio("/songs/" + track); // Create new audio
+    currentSongIndex = trackIndex % songs.length; // Ensure index is within range
+    if (currentSongIndex < 0) currentSongIndex = songs.length - 1; // Handle negative index
+
+    currentAudio = new Audio("/songs/" + songs[currentSongIndex]); // Create new audio
     currentAudio.play();
-    play.src="pause.svg";
-    document.querySelector(".songinfo").innerHTML = track;  
+    play.src = "pause.svg";
+    currentAudio.addEventListener("ended", playNextSong);
+    document.querySelector(".songinfo").innerHTML = songs[currentSongIndex];
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
+
     currentAudio.addEventListener("timeupdate", () => {
-        document.querySelector(".songtime").innerHTML =`${formatTime(currentAudio.currentTime)} / ${formatTime(currentAudio.duration)}`;
-        document.querySelector(".circle").style.left=(currentAudio.currentTime/currentAudio.duration)*100 + "%";
+        document.querySelector(".songtime").innerHTML = `${formatTime(currentAudio.currentTime)} / ${formatTime(currentAudio.duration)}`;
+        document.querySelector(".circle").style.left = (currentAudio.currentTime / currentAudio.duration) * 100 + "%";
     });
-    document.querySelector(".seekbar").addEventListener("click",e=>{
-        let percent=(e.offsetX/e.target.getBoundingClientRect().width)*100;
-        document.querySelector(".circle").style.left=percent + "%";
-        currentAudio.currentTime=((currentAudio.duration)*percent)/100;
-    })
+
+    document.querySelector(".seekbar").addEventListener("click", e => {
+        let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
+        document.querySelector(".circle").style.left = percent + "%";
+        currentAudio.currentTime = ((currentAudio.duration) * percent) / 100;
+    });
+};
+
+// Function to play the next song
+const playNextSong = () => {
+    playmusic((currentSongIndex + 1) % songs.length);
+};
+
+// Function to play the previous song
+const playPreviousSong = () => {
+    playmusic((currentSongIndex - 1 + songs.length) % songs.length);
 };
 
 async function main() {
-    let songs = await getsongs();
+    songs = await getsongs();
     let songUL = document.querySelector(".songlist ul");
     songUL.innerHTML = ""; // Clear previous list
 
@@ -70,27 +89,32 @@ async function main() {
         `;
 
         li.addEventListener("click", () => {
-            let track = li.getAttribute("data-url");
-            console.log(`Playing: ${track}`); 
+            let track = songs.indexOf(song);
+            console.log(`Playing: ${track}`);
             playmusic(track); // Play song & stop previous one
         });
 
         songUL.appendChild(li);
     }
-    let el1=document.getElementById("play");
-    el1.addEventListener("click",()=>{
-        if(currentAudio.paused){
+
+    let el1 = document.getElementById("play");
+    el1.addEventListener("click", () => {
+        if (currentAudio.paused) {
             currentAudio.play();
-            play.src="pause.svg";
-        }
-        else{
+            play.src = "pause.svg";
+        } else {
             currentAudio.pause();
-            play.src="play.svg";
+            play.src = "play.svg";
         }
-    })
-    currentAudio.addEventListener("timeupdate",()=>{
-        document.querySelector(".songtime").innerHTML=`${formatTime(currentAudio.currentTime)}:${formatTime(currentAudio.duration)}`;
-    })
+    });
+
+    // Next and Previous button event listeners
+    document.getElementById("next").addEventListener("click", playNextSong);
+    document.getElementById("previous").addEventListener("click", playPreviousSong);
+
+    currentAudio.addEventListener("timeupdate", () => {
+        document.querySelector(".songtime").innerHTML = `${formatTime(currentAudio.currentTime)}:${formatTime(currentAudio.duration)}`;
+    });
 }
 
 main();
