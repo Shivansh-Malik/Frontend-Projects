@@ -264,15 +264,6 @@ body {
     padding:12px;
     height: 35px;
   }
-  /* .songbutton{
-    display: flex;
-    justify-content: center;
-    gap:16px;
-    position:absolute;
-    bottom: 25px; /* Keep it near the bottom */
-    /* left: 50%;
-    transform: translateX(-50%);
-  }  */
   .songbutton img{
     cursor:pointer;
   }
