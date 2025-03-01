@@ -58,12 +58,9 @@ const playmusic = (trackIndex) => {
     });
 };
 
-// Function to play the next song
 const playNextSong = () => {
     playmusic((currentSongIndex + 1) % songs.length);
 };
-
-// Function to play the previous song
 const playPreviousSong = () => {
     playmusic((currentSongIndex - 1 + songs.length) % songs.length);
 };
@@ -107,14 +104,10 @@ async function main() {
             play.src = "play.svg";
         }
     });
-
-    // Next and Previous button event listeners
     document.getElementById("next").addEventListener("click", playNextSong);
     document.getElementById("previous").addEventListener("click", playPreviousSong);
-
     currentAudio.addEventListener("timeupdate", () => {
         document.querySelector(".songtime").innerHTML = `${formatTime(currentAudio.currentTime)}:${formatTime(currentAudio.duration)}`;
     });
 }
-
 main();
