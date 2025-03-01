@@ -1,3 +1,6 @@
+const playbar = document.querySelector(".playbar");
+let interval; // Store the background change interval
+
 async function getsongs() {
     let a = await fetch("http://127.0.0.1:5500/songs/");
     let response = await a.text();
@@ -9,39 +12,44 @@ async function getsongs() {
     for (let i = 0; i < as.length; i++) {
         const element = as[i];
         if (element.href.endsWith(".mp3")) {
-            let filename = decodeURIComponent(element.href.split("/").pop()); // Extract filename
-            songs.push(filename); // Store only the filename, not full URL
+            let filename = decodeURIComponent(element.href.split("/").pop());
+            songs.push(filename);
         }
     }
     return songs;
 }
 
 function formatTime(seconds) {
-    seconds = Math.floor(seconds); // Round down to remove decimals
+    seconds = Math.floor(seconds);
     let mins = Math.floor(seconds / 60);
     let secs = seconds % 60;
     
     return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 }
 
-let currentAudio = null; // Store the currently playing audio
-let songs = []; // Store song list globally
-let currentSongIndex = 0; // Track the currently playing song index
+let currentAudio = null;
+let songs = [];
+let currentSongIndex = 0;
 
 const playmusic = (trackIndex) => {
-    if (songs.length === 0) return; // Prevent playing if no songs loaded
+    if (songs.length === 0) return;
 
     if (currentAudio) {
-        currentAudio.pause(); // Stop the previous song
-        currentAudio.currentTime = 0; // Reset to start
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
     }
 
-    currentSongIndex = trackIndex % songs.length; // Ensure index is within range
-    if (currentSongIndex < 0) currentSongIndex = songs.length - 1; // Handle negative index
+    currentSongIndex = trackIndex % songs.length;
+    if (currentSongIndex < 0) currentSongIndex = songs.length - 1;
 
-    currentAudio = new Audio("/songs/" + songs[currentSongIndex]); // Create new audio
+    currentAudio = new Audio("/songs/" + songs[currentSongIndex]);
     currentAudio.play();
     play.src = "pause.svg";
+
+    // 🔹 Add animated background
+    playbar.classList.add("animated-bg");
+    startBackgroundAnimation();
+
     currentAudio.addEventListener("ended", playNextSong);
     document.querySelector(".songinfo").innerHTML = songs[currentSongIndex];
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
@@ -58,9 +66,33 @@ const playmusic = (trackIndex) => {
     });
 };
 
+// 🔹 Function to change background color every few seconds
+function startBackgroundAnimation() {
+    clearInterval(interval); // Stop previous interval
+
+    interval = setInterval(() => {
+        const colors = [
+            "linear-gradient(135deg, #ff4e50, #fc913a)",
+            "linear-gradient(135deg, #ffb199, #ff0844)",
+            "linear-gradient(135deg, #a8ff78, #78ffd6)",
+            "linear-gradient(135deg, #12c2e9, #c471ed)",
+            "linear-gradient(135deg, #d4fc79, #96e6a1)"
+        ];
+        playbar.style.background = colors[Math.floor(Math.random() * colors.length)];
+    }, 5000);
+}
+
+// 🔹 Function to stop background animation
+function stopBackgroundAnimation() {
+    clearInterval(interval);
+    playbar.style.background = ""; // Revert to default
+    playbar.classList.remove("animated-bg");
+}
+
 const playNextSong = () => {
     playmusic((currentSongIndex + 1) % songs.length);
 };
+
 const playPreviousSong = () => {
     playmusic((currentSongIndex - 1 + songs.length) % songs.length);
 };
@@ -68,10 +100,10 @@ const playPreviousSong = () => {
 async function main() {
     songs = await getsongs();
     let songUL = document.querySelector(".songlist ul");
-    songUL.innerHTML = ""; // Clear previous list
+    songUL.innerHTML = "";
 
     for (const song of songs) {
-        let songName = song.replace(".mp3", ""); // Remove extension
+        let songName = song.replace(".mp3", "");
         let li = document.createElement("li"); 
         li.setAttribute("data-url", song);
         li.innerHTML = `
@@ -87,8 +119,7 @@ async function main() {
 
         li.addEventListener("click", () => {
             let track = songs.indexOf(song);
-            console.log(`Playing: ${track}`);
-            playmusic(track); // Play song & stop previous one
+            playmusic(track);
         });
 
         songUL.appendChild(li);
@@ -96,16 +127,23 @@ async function main() {
 
     let el1 = document.getElementById("play");
     el1.addEventListener("click", () => {
+        if (!currentAudio) return;
+
         if (currentAudio.paused) {
             currentAudio.play();
             play.src = "pause.svg";
+            playbar.classList.add("animated-bg");
+            startBackgroundAnimation();
         } else {
             currentAudio.pause();
             play.src = "play.svg";
+            stopBackgroundAnimation();
         }
     });
+
     document.getElementById("next").addEventListener("click", playNextSong);
     document.getElementById("previous").addEventListener("click", playPreviousSong);
+
     currentAudio.addEventListener("timeupdate", () => {
         document.querySelector(".songtime").innerHTML = `${formatTime(currentAudio.currentTime)}:${formatTime(currentAudio.duration)}`;
     });
