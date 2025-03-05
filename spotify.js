@@ -44,7 +44,7 @@ const playmusic = (trackIndex) => {
 
     currentAudio = new Audio("/songs/" + songs[currentSongIndex]);
     currentAudio.play();
-    play.src = "pause.svg";
+    play.src = "svg/pause.svg";
 
     // 🔹 Add animated background
     playbar.classList.add("animated-bg");
@@ -106,7 +106,7 @@ async function main() {
         let li = document.createElement("li"); 
         li.setAttribute("data-url", song);
         li.innerHTML = `
-            <img class="invert" src="music.svg" alt="">
+            <img class="invert" src="svg/music.svg" alt="">
             <div class="info">
                 <div>${songName}</div>
                 <div>Song Artist</div>
@@ -130,12 +130,12 @@ async function main() {
 
         if (currentAudio.paused) {
             currentAudio.play();
-            play.src = "pause.svg";
+            play.src = "svg/pause.svg";
             playbar.classList.add("animated-bg");
             startBackgroundAnimation();
         } else {
             currentAudio.pause();
-            play.src = "play.svg";
+            play.src = "svg/play.svg";
             stopBackgroundAnimation();
         }
     });
