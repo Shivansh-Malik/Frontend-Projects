@@ -279,7 +279,7 @@ body {
     width: 100%;
     padding:12px;
     height: 35px;
-    transition: background 2s ease-in-out;
+    transition: background-size 2s ease-in-out;
   }
   .animated-bg {
     animation: gradientAnimation 5s infinite alternate;
