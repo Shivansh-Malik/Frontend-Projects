@@ -46,7 +46,6 @@ const playmusic = (trackIndex) => {
     currentAudio.play();
     play.src = "svg/pause.svg";
 
-    // 🔹 Add animated background
     playbar.classList.add("animated-bg");
     startBackgroundAnimation();
 
@@ -66,7 +65,6 @@ const playmusic = (trackIndex) => {
     });
 };
 
-// 🔹 Function to change background color every few seconds
 function startBackgroundAnimation() {
     clearInterval(interval);
     interval = setInterval(() => {
@@ -81,10 +79,9 @@ function startBackgroundAnimation() {
     }, 5000);
 }
 
-// 🔹 Function to stop background animation
 function stopBackgroundAnimation() {
     clearInterval(interval);
-    playbar.style.background = ""; // Revert to default
+    playbar.style.background = ""; 
     playbar.classList.remove("animated-bg");
 }
 
